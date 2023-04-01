@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'PresenceSE70'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_41909815575C4525B1CE26C6C06947CB }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_25B6AA5F74224F76BD7835CA4EBA2B39 }}
