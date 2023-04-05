@@ -548,7 +548,24 @@ def mark_your_attendance_out(request):
     return redirect('home')
 
 
+def predict(face_aligned, svc, threshold=0.7):
+    face_encodings = np.zeros((1, 128))
+    try:
+        x_face_locations = face_recognition.face_locations(face_aligned)
+        faces_encodings = face_recognition.face_encodings(face_aligned, known_face_locations=x_face_locations)
+        if (len(faces_encodings) == 0):
+            return ([-1], [0])
 
+    except:
+
+        return ([-1], [0])
+
+    prob = svc.predict_proba(faces_encodings)
+    result = np.where(prob[0] == np.amax(prob[0]))
+    if (prob[0][result[0]] <= threshold):
+        return ([-1], prob[0][result[0]])
+
+    return (result[0], prob[0][result[0]])
 
 @login_required
 def not_authorised(request):
