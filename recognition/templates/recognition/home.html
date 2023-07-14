@@ -12,13 +12,13 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'recognition/css/bootstrap.min.css' %}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'recognition\static\recognition\css' %}">
+    <link rel="stylesheet" href="{% static 'recognition/css/style.css' %}">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{% static 'recognition/img/logo2.png' %}" />
+    <link rel="shortcut icon" href="{% static 'recognition/img/logo1.png' %}" />
 
     <style>
         /* Add custom CSS styles here */
@@ -28,14 +28,14 @@
         
         /* Define styles for the main banner */
         .main-banner {
-            background-image: url(static/recognition/img/banner.png);
+            background-image: url(static/recognition/banner.png);
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
             padding-top: 290px;
             padding-bottom: 240px;
             text-align: center;
-            background-color: #2a2a2a;
+            background-color: #0a298d;
         }
     </style>
 </head>
