@@ -42,26 +42,17 @@
 
 <body>
 <!-- Navbar -->
-      <nav class="main-header navbar bg-secondary navbar-white py-4">
-
-          <a href="{% url 'home' %}" class="navbar-brand">
-            <img
-              src="{% static 'recognition/img/logo2.png' %}"
-              alt="Presence Logo"
-              class="img-circle"
-              style="width: 110px; height:90px;"
-            />
-          </a>
-<!--           Right navbar links-->
-          <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-            <li class="nav-item dropdown">
-              <a class="button btn btn-primary" href='{%url "login" %}'>Admin Login</a>
-            </li>
-          </ul>
-
-        </div>
-
-      </nav>
+<nav class="main-header navbar bg-secondary navbar-white py-4">
+  <a href="{% url 'home' %}" class="navbar-brand">
+      <img src="{% static 'recognition/img/logo1.png' %}" alt="AdminLTE Logo" class="img-circle" style="width: 400px; height:150px;" />
+  </a>
+  <h1 class="text-white text-center display-3 text-uppercase"></h1>
+  <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+      <li class="nav-item dropdown">
+          <a class="button btn btn-primary" href='{%url "login" %}'>Admin Login</a>
+      </li>
+  </ul>
+</nav>
 
     <div class="main-banner">
     <div class="container">
