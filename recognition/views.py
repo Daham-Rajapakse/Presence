@@ -572,7 +572,12 @@ def mark_your_attendance_out(request):
                 cv2.imshow("Face Detected", background_image)
                 update_attendance_in_db_out(present)
                 cv2.waitKey(5000)
-                
+                cv2.destroyWindow("Face Detected")
+
+                vs.stop()  # Stop the video stream
+                cv2.destroyAllWindows()  # Close all windows
+                return redirect('home')  # Redirect to the desired page after detecting a face
+
             else:
                 person_name = "unknown"
                 cv2.putText(frame, str(person_name), (x + 6, y + h - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
