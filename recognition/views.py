@@ -445,6 +445,7 @@ def mark_your_attendance(request):
 
                 # Display the image in a window for 10 seconds
                 cv2.imshow("Face Detected", background_image)
+                update_attendance_in_db_in(present)
                 cv2.waitKey(5000)
                 cv2.destroyWindow("Face Detected")
 
